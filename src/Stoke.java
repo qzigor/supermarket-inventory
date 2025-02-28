@@ -12,6 +12,19 @@ public class Stoke {
         produtos.removeIf(produto -> produto.getName().equalsIgnoreCase(name));
     }
 
+    public void atualizarProduto(String name){
+
+    }
+
+    public Products pesquisarProduto(String name){
+        for(Products produto:produtos){
+            if(produto.getName().equalsIgnoreCase(name)){
+                return produto;
+            }
+        }
+        return null;
+    }
+
     public void listarProdutos(){
         System.out.println("***** LISTA DE PRODUTOS *****");
         System.out.printf("%-14s | %-14s | %-11s | %-11s\n", "Nome", "Categoria", "Validade", "Preço");

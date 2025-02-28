@@ -1,15 +1,16 @@
 public class Products {
-    int ID;
     private String name;
     private String categoria;
     private String validade;
+    private int quantidade;
     private float preco;
 
-    public Products(String name, String categoria, String validade, float preco){
+    public Products(String name, String categoria, String validade, int quantidade, float preco){
         this.name = name;
         this.categoria = categoria;
         this.validade = validade;
         this.preco = preco;
+        this.quantidade = quantidade;
     }
 
     public void setName(String name){
@@ -42,6 +43,14 @@ public class Products {
 
     public float getPreco(){
         return preco;
+    }
+
+    public void setQuantiadade(int quantiadade){
+        this.quantidade = quantiadade;
+    }
+
+    public int getQuantiadade(){
+        return quantidade;
     }
 
 }
