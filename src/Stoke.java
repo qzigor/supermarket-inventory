@@ -8,8 +8,8 @@ public class Stoke {
         produtos.add(produto);
     }
 
-    public void deletarProduto(String name){
-        produtos.removeIf(produto -> produto.getName().equalsIgnoreCase(name));
+    public boolean deletarProduto(String name){
+        return produtos.removeIf(produto -> produto.getName().equalsIgnoreCase(name));
     }
 
     public Products pesquisarProduto(String name){

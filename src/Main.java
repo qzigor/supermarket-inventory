@@ -49,18 +49,24 @@ public class Main {
                 case 2:
                     System.out.print("Informe o nome do produto: ");
                     name = input.nextLine();
-                    myStoke.deletarProduto(name);
+                    if(myStoke.deletarProduto(name)){
+                        System.out.println("Produto removido com sucesso.");
+                    }
+                    else{
+                        System.out.println("Produto não encontrado.");
+                    }
                     break;
                 case 3:
                     System.out.print("Informe o nome do produto: ");
                     name = input.nextLine();
-                    System.out.println("O que deseja atualizar do produto: ");
                     System.out.println("[1] - Nome");
                     System.out.println("[2] - Categoria");
                     System.out.println("[3] - Validade");
-                    System.out.println("[4] - Preço");
-                    System.out.println("[5] - Quantidade");
+                    System.out.println("[4] - Quantidade");
+                    System.out.println("[5] - Preço");
+                    System.out.print("O que deseja atualizar do produto: ");
                     optionUpdate = input.nextInt();
+                    input.nextLine();
                     switch(optionUpdate){
                         case 1:
                             System.out.print("Informe o novo nome do produto: ");
@@ -99,9 +105,9 @@ public class Main {
                     name = input.nextLine();
                     produtoPesquisado = myStoke.pesquisarProduto(name);
                     if(produtoPesquisado != null){
-                        System.out.printf("%-14s | %-14s | %-11s | %-11s\n", "Nome", "Categoria", "Validade", "Preço");
-                        System.out.printf("%-14s %-14s %-14s R$ %-14.2f\n", produtoPesquisado.getName(), produtoPesquisado.getCategoria(),
-                                produtoPesquisado.getValidade(), produtoPesquisado.getPreco());
+                        System.out.printf("%-14s | %-14s | %-11s | %-11s | %-11s\n", "Nome", "Categoria", "Validade", "Quantidade", "Preço");
+                        System.out.printf("%-14s | %-14s | %-11s | %-11s | R$ %-11.2f\n", produtoPesquisado.getName(), produtoPesquisado.getCategoria(),
+                                produtoPesquisado.getValidade(), produtoPesquisado.getQuantiadade(), produtoPesquisado.getPreco());
                     }
                     else{
                         System.out.println("Produto não encontrado no sistema");
