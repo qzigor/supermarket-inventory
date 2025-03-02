@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         Stoke myStoke = new Stoke();
 
@@ -17,8 +17,10 @@ public class Main {
         int optionUpdate;
         String update;
 
+        System.out.println("Bem-vindo ao Supermarket inventory!!");
         while(true){
-            System.out.println("--- Bem-vindo ao sitema do supermercado! ---");
+            System.out.println();
+            System.out.println("--- Menu ---");
             System.out.println("[1] - Inserir produto");
             System.out.println("[2] - Deletar produto");
             System.out.println("[3] - Atualizar produto");
@@ -27,6 +29,7 @@ public class Main {
             System.out.print("Selecione uma opção para continuar: ");
             option = input.nextInt();
             input.nextLine();
+            System.out.println();
             switch(option){
                 case 1:
                     System.out.print("Informe o nome do produto: ");
@@ -110,9 +113,10 @@ public class Main {
                 default:
                     System.out.println("Opção inválida!");
             }
-            System.out.println("Selecione uma opção:");
+            System.out.println();
             System.out.println("[1] - Voltar para o Menu");
             System.out.println("[2] - Sair do programa");
+            System.out.print("Selecione uma opção: ");
             option = input.nextInt();
             if(option == 2){
                 break;
